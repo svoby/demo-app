@@ -1,4 +1,4 @@
-import { Component, FC, useCallback } from 'react';
+import { Component, FC, memo, useCallback } from 'react';
 import React from 'react';
 import { TodoItem } from '../../types/todo';
 
@@ -18,4 +18,4 @@ const Todo: FC<TodoProps> = ({ todo }) => {
     );
 };
 
-export default Todo;
+export default memo(Todo);

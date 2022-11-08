@@ -1,8 +1,8 @@
 import { useGetTodoList } from '../../hooks/useGetTodos';
 import Todo from './Todo';
-import { FC } from 'react';
+import { FC, memo } from 'react';
 
-const App: FC = () => {
+const App: FC = (props) => {
     const todoList = useGetTodoList();
 
     return (
@@ -18,4 +18,4 @@ const App: FC = () => {
     );
 };
 
-export default App;
+export default memo(App);
