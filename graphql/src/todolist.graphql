@@ -1,0 +1,7 @@
+query getTodoList {
+    todos {
+        id
+        title
+        completed
+    }
+}
