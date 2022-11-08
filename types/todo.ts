@@ -4,4 +4,4 @@ export type TodoItem = {
     done: boolean;
 };
 
-export type TodoList = TodoItem[];
+export type TodoList = TodoItem[] | null;
