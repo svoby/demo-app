@@ -6,13 +6,15 @@ const App: FC = () => {
     const todoList = useGetTodoList();
 
     return (
-        <ul>
-            {!todoList && <li>Loading...</li>}
-
-            {todoList?.map((todo, index) => (
-                <Todo todo={todo} key={index} />
-            ))}
-        </ul>
+        <>
+            <h1>Todo list</h1>
+            {!todoList && <p>Fetching todo list...</p>}
+            <ul>
+                {todoList?.map((todo, index) => (
+                    <Todo todo={todo} key={index} />
+                ))}
+            </ul>
+        </>
     );
 };
 
