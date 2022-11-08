@@ -1,7 +1,6 @@
-import App from 'next/app';
+
+import App from '../components/homework/App';
 import Head from 'next/head';
-import Image from 'next/image';
-import Todo from '../components/homework/Todo';
 import styles from '../styles/Home.module.css';
 
 export default function Index() {
@@ -13,7 +12,7 @@ export default function Index() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <App />
-            <footer className={styles.footer}>@copy; Luboš Svoboda</footer>
+            <footer className={styles.footer}>&copy; Luboš Svoboda</footer>
         </div>
     );
 }

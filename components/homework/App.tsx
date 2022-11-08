@@ -1,46 +1,51 @@
-import React from 'react';
-
+import { useState, useRef, useEffect } from 'react';
+import { TodoList } from '../../types/todo';
 import Todo from './Todo';
 
-// rework this into regular api call, feel free to use any open api
-var todos = (): Promise<{ id: string; title: string }[]> =>
+var todos = (): Promise<TodoList> =>
     new Promise((res) => {
         setTimeout(() => {
             res([
                 {
                     id: '1',
                     title: 'Go shopping',
+                    done: false,
                 },
                 {
                     id: '2',
                     title: 'Job interview',
+                    done: false,
                 },
                 {
                     id: '3',
                     title: 'Prepare homework',
+                    done: false,
                 },
             ]);
         }, 100);
     });
 
 function App() {
-    const [state, setState] = React.useState<{ id: string; title: string }[]>([]);
+    const [state, setState] = useState<TodoList>([]);
+    const isLoaded = useRef(false);
 
-    React.useEffect(() => {
+    useEffect(() => {
+        if (isLoaded.current) {
+            return;
+        }
+
         (async () => {
             var awaitedTodos = await todos();
-            for (var i = 0; i < awaitedTodos.length; i++) {
-                setState([...state, awaitedTodos[i]]);
-            }
+            setState([...awaitedTodos]);
         })();
-    });
+    }, []);
 
     return (
-        <div>
+        <ul>
             {state.map((todo, index) => (
                 <Todo todo={todo} key={index} />
             ))}
-        </div>
+        </ul>
     );
 }
 

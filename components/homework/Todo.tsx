@@ -14,9 +14,9 @@ class Todo extends React.Component<any> {
 
     render() {
         return (
-            <div>
+            <li>
                 <div onClick={this.handleOnClick}>{this.props.todo.title}</div>
-            </div>
+            </li>
         );
     }
 }
