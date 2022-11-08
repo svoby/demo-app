@@ -37,8 +37,8 @@ function App() {
 
     return (
         <div>
-            {state.map((todo) => (
-                <Todo todo={todo} />
+            {state.map((todo, index) => (
+                <Todo todo={todo} key={index} />
             ))}
         </div>
     );
