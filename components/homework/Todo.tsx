@@ -1,11 +1,20 @@
+import { Component } from 'react';
 import React from 'react';
+import { TodoItem } from '../../types/todo';
 
-class Todo extends React.Component<any> {
-    shouldComponentUpdate(prevProps: any) {
-        if (this.props != prevProps) {
-            return true;
-        }
-        return false;
+type TodoProps = {
+    todo: TodoItem;
+};
+
+class Todo extends Component<TodoProps> {
+    constructor(props: TodoProps) {
+        super(props);
+        this.handleOnClick = this.handleOnClick.bind(this);
+    }
+
+    shouldComponentUpdate(nextProps: TodoProps): boolean {
+        const changed = this.props.todo.title !== nextProps.todo.title || this.props.todo.done !== nextProps.todo.done;
+        return changed;
     }
 
     handleOnClick() {

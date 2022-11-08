@@ -1,8 +1,9 @@
 import App from '../components/homework/App';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import { FC } from 'react';
 
-export default function Index() {
+const Index: FC = () => {
     return (
         <div className={styles.container}>
             <Head>
@@ -14,4 +15,6 @@ export default function Index() {
             <footer className={styles.footer}>&copy; Luboš Svoboda</footer>
         </div>
     );
-}
+};
+
+export default Index;
