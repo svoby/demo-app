@@ -6,5 +6,7 @@ export function useGetTodoList(): [TodoList | undefined, boolean] {
     const [result] = useGetTodoListQueryApi();
     const { data, fetching, error } = result;
 
+    // error handling
+
     return useMemo(() => [data?.todos, fetching], [data, fetching]);
 }

@@ -1,17 +1,13 @@
-import Link from 'next/link';
 import { FC } from 'react';
 import BasicLayout from '../../components/layout/BasicLayout';
+import TodoDetail from '../../components/page/detail';
 
-const Detail: FC = () => {
+const DetailPage: FC = () => {
     return (
         <BasicLayout title="TODO detail">
-            <h1>TODO detail</h1>
-            <p>Not implemented yet</p>
-            <p>
-                <Link href="/">Back to list</Link>
-            </p>
+            <TodoDetail />
         </BasicLayout>
     );
 };
 
-export default Detail;
+export default DetailPage;

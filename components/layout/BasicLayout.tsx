@@ -21,6 +21,7 @@ const BasicLayout: FC<Props> = ({ children, title }) => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <div className={styles.container}>
+                <h1>{title}</h1>
                 {children}
                 <footer className={styles.footer}>&copy; Luboš Svoboda</footer>
             </div>

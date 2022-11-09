@@ -7,7 +7,6 @@ const App: FC = () => {
 
     return (
         <>
-            <h1>TODO list</h1>
             {fetching ? (
                 <p>Fetching TODO list...</p>
             ) : (
