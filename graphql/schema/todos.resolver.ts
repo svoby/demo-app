@@ -10,7 +10,7 @@ export class TodosResolver {
     }
 
     @Query(() => Todo)
-    todo(@Arg("id", () => String) id: string): Todo | undefined {
-        return todos_dummy.find(todo => todo.id === id);
+    todo(@Arg('id', () => String) id: string): Todo | undefined {
+        return todos_dummy.find((todo) => todo.id === id);
     }
 }

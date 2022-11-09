@@ -2,18 +2,21 @@ import { useGetTodoList } from '../../hooks/useGetTodos';
 import Todo from './Todo';
 import { FC, memo } from 'react';
 
-const App: FC = (props) => {
-    const todoList = useGetTodoList();
+const App: FC = () => {
+    const [todoList, fetching] = useGetTodoList();
 
     return (
         <>
-            <h1>Todo list</h1>
-            {!todoList && <p>Fetching todo list...</p>}
-            <ul>
-                {todoList?.map((todo, index) => (
-                    <Todo todo={todo} key={index} />
-                ))}
-            </ul>
+            <h1>TODO list</h1>
+            {fetching ? (
+                <p>Fetching TODO list...</p>
+            ) : (
+                <ul>
+                    {todoList?.map((todo, index) => (
+                        <Todo todo={todo} key={index} />
+                    ))}
+                </ul>
+            )}
         </>
     );
 };
