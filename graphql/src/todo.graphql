@@ -1,5 +1,5 @@
-query getTodoList {
-    todos {
+query getTodo($id: String!) {
+    todo(id: $id) {
         id
         title
         completed
