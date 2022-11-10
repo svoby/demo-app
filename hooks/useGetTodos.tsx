@@ -7,6 +7,6 @@ export function useGetTodoList(): [TodoList | undefined, boolean] {
     const { data, fetching, error } = result;
 
     // error handling
-
-    return useMemo(() => [data?.todos, fetching], [data, fetching]);
+    return data ? [data.todos, fetching] : [undefined, fetching];
+    //return useMemo(() => [data?.todos, fetching], [data, fetching]);
 }

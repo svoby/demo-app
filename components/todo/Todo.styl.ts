@@ -6,10 +6,6 @@ const localVariables = {
     checkColor: '#32a2f6',
 };
 
-interface ICanBeCompleted {
-    completed: boolean;
-}
-
 export const TodoStyled = styled.div`
     display: flex;
     align-items: center;
@@ -62,6 +58,7 @@ export const TodoLinkStyled = styled.span<HTMLAttributes<HTMLSpanElement> & ICan
             color: ${$completed ? '#999' : '#000'};
             transition: ${localVariables.transition};
             text-decoration: ${$completed ? 'line-through' : 'none'};
+            border: none;
 
             &:hover {
                 color: #388438;

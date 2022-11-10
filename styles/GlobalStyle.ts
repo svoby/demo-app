@@ -2,10 +2,13 @@ import { createGlobalStyle } from 'styled-components';
 import { reset } from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
-  ${reset}
+
+${reset}
+
   html, body {
     height:100%;
   }
+
   body {
     display: flex;
     justify-content: center;
@@ -17,6 +20,18 @@ const GlobalStyle = createGlobalStyle`
     background-size: cover;
     font-family: sans-serif;
   }
+
+  a {
+    color: #60607b;
+    text-decoration: none;
+    border: 1px solid transparent;
+
+    &:hover {
+      color: #025797;
+      border-bottom-color: #025797;
+    }
+  }
+
   footer {
     text-align: center;
   }
