@@ -8,7 +8,7 @@ import {
     TodoDetailTitleStyled,
     TodoStatusStyled,
     TogglerButtonStyled,
-} from '../../components/page/Detail.style';
+} from '../../components/detail/Detail.style';
 import { GetTodoDocumentApi } from '../../graphql/generated';
 import { client, ssrCache } from '../../helpers/client';
 import { useGetTodo } from '../../hooks/useGetTodo';
