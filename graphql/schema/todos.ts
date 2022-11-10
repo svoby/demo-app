@@ -3,11 +3,11 @@ import { ObjectType, Field } from 'type-graphql';
 @ObjectType()
 export class Todo {
     @Field(() => String)
-    id: string;
+    id!: string;
 
     @Field(() => String)
-    title: string;
+    title!: string;
 
     @Field(() => Boolean)
-    completed: boolean;
+    completed!: boolean;
 }
