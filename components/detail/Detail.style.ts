@@ -1,5 +1,6 @@
 import { HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
+import { ICanBeCompleted } from '../../types/todo';
 
 export const TodoDetailStyled = styled.div`
     border: 1px solid green;

@@ -1,4 +1,4 @@
-interface ICanBeCompleted {
+export interface ICanBeCompleted {
     completed: boolean;
 }
 export type TodoItem = ICanBeCompleted & {
