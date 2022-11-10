@@ -7,12 +7,15 @@ export const TodoDetailStyled = styled.div`
     flex-grow: 1;
 `;
 
-export const TodoDetailTitleStyled = styled.h1`
-    margin: 40px 0 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-`;
+export const TodoDetailTitleStyled = styled.h1<HTMLAttributes<HTMLHeadingElement> & Partial<ICanBeCompleted>>(
+    ({ $completed }) => css`
+        margin: 40px 0 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        text-align: center;
+        text-decoration: ${$completed ? 'line-through' : 'none'};
+    `,
+);
 
 export const TodoStatusStyled = styled.div`
     opacity: 0.5;

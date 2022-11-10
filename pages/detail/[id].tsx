@@ -21,7 +21,7 @@ const DetailPage: FC = () => {
         <>
             {todo ? (
                 <>
-                    <TodoDetailTitleStyled>{todo.title}</TodoDetailTitleStyled>
+                    <TodoDetailTitleStyled $completed={todo.completed}>{todo.title}</TodoDetailTitleStyled>
                     <TodoStatusStyled>{todo.completed ? 'Completed' : 'Not done'}</TodoStatusStyled>
                 </>
             ) : (
