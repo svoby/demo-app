@@ -1,13 +1,14 @@
 import Head from 'next/head';
 import { FC } from 'react';
 import { createClient, Provider } from 'urql';
+import { AppContainerStyled, AppContentStyled, AppFooterStyled, AppHeaderStyled } from '../homepage/App.style';
 
 type Props = {
     title?: string;
     children: React.ReactNode;
 };
 
-const BasicLayout: FC<Props> = ({ children, title }) => {
+const AppContainer: FC<Props> = ({ children, title = 'My TODO list' }) => {
     const client = createClient({
         url: 'http://localhost:3000/api/graphql',
     });
@@ -16,16 +17,14 @@ const BasicLayout: FC<Props> = ({ children, title }) => {
         <Provider value={client}>
             <Head>
                 <title>{title}</title>
-                <meta name="description" content="Homework demo app" />
-                <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div>
-                <h1>{title}</h1>
-                {children}
-                <footer>&copy; Luboš Svoboda</footer>
-            </div>
+            <AppContainerStyled>
+                <AppHeaderStyled>{title}</AppHeaderStyled>
+                <AppContentStyled>{children}</AppContentStyled>
+            </AppContainerStyled>
+            <AppFooterStyled>&copy; Luboš Svoboda</AppFooterStyled>
         </Provider>
     );
 };
 
-export default BasicLayout;
+export default AppContainer;

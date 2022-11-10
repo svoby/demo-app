@@ -1,17 +1,47 @@
 [
     {
         "id": "1",
-        "title": "Go shopping",
+        "title": "Wake up",
         "completed": true
     },
     {
         "id": "2",
-        "title": "Job interview",
-        "completed": false
+        "title": "Have a breakfast",
+        "completed": true
     },
     {
         "id": "3",
-        "title": "Prepare homework",
+        "title": "Go to work",
+        "completed": false
+    },
+    {
+        "id": "4",
+        "title": "Have a lunch",
+        "completed": false
+    },
+    {
+        "id": "5",
+        "title": "Go home",
+        "completed": false
+    },
+    {
+        "id": "6",
+        "title": "Have a dinner",
+        "completed": false
+    },
+    {
+        "id": "7",
+        "title": "Read a book",
+        "completed": false
+    },
+    {
+        "id": "8",
+        "title": "Go to bed",
+        "completed": false
+    },
+    {
+        "id": "9",
+        "title": "Sleep",
         "completed": false
     }
 ]

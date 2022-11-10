@@ -1,13 +1,8 @@
-import App from '../components/homework/App';
+import App from '../components/homepage/App';
 import { FC } from 'react';
-import BasicLayout from '../components/layout/BasicLayout';
 
 const Index: FC = () => {
-    return (
-        <BasicLayout title="TODO homepage ">
-            <App />
-        </BasicLayout>
-    );
+    return <App />;
 };
 
 export default Index;

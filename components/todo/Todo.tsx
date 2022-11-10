@@ -1,17 +1,22 @@
 import { FC, memo } from 'react';
 import React from 'react';
 import { TodoItem } from '../../types/todo';
-import Link from 'next/link';
-import { TodoStyled } from './Todo.styl';
+import NextLink from 'next/link';
+import { TodoCheckStyled, TodoLinkStyled, TodoStyled } from './Todo.styl';
 
 type TodoProps = {
     todo: TodoItem;
 };
 
 const Todo: FC<TodoProps> = ({ todo }) => {
+    const { id, title, completed } = todo;
+
     return (
         <TodoStyled>
-            <Link href={`/detail/${todo.id}`}>{todo.title}</Link>
+            <TodoCheckStyled $completed={completed} />
+            <TodoLinkStyled $completed={completed}>
+                <NextLink href={`/detail/${id}`}>{title}</NextLink>
+            </TodoLinkStyled>
         </TodoStyled>
     );
 };
