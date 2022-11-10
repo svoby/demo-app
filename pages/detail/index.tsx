@@ -1,11 +1,14 @@
 import Link from 'next/link';
 import { FC } from 'react';
+import { ButtonsBarStyled, TodoDetailTitleStyled } from '../../components/detail/Detail.style';
 
 const Detail: FC = () => {
     return (
         <>
-            <h1>Error: No ID specified</h1>
-            <Link href="/">Back to list</Link>
+            <TodoDetailTitleStyled>{`Todo  not found`}</TodoDetailTitleStyled>
+            <ButtonsBarStyled>
+                <Link href="/">Back</Link>
+            </ButtonsBarStyled>
         </>
     );
 };

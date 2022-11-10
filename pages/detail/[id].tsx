@@ -19,11 +19,13 @@ const DetailPage: FC = () => {
 
     return (
         <>
-            {todo && (
+            {todo ? (
                 <>
                     <TodoDetailTitleStyled>{todo.title}</TodoDetailTitleStyled>
                     <TodoStatusStyled>{todo.completed ? 'Completed' : 'Not done'}</TodoStatusStyled>
                 </>
+            ) : (
+                <TodoDetailTitleStyled>{`Todo ${id} not found`}</TodoDetailTitleStyled>
             )}
             <ButtonsBarStyled>
                 <Link href="/">Back</Link>
