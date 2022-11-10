@@ -1,6 +1,8 @@
 import { useGetTodoList } from '../../hooks/useGetTodos';
 import Todo from './Todo';
-import { FC, memo } from 'react';
+import { FC, memo, ReactNode } from 'react';
+import List from '../../helpers/List';
+
 
 const App: FC = () => {
     const [todoList, fetching] = useGetTodoList();
@@ -10,11 +12,7 @@ const App: FC = () => {
             {fetching ? (
                 <p>Fetching TODO list...</p>
             ) : (
-                <ul>
-                    {todoList?.map((todo, index) => (
-                        <Todo todo={todo} key={index} />
-                    ))}
-                </ul>
+                <List items={todoList || []} render={(todo) => <Todo todo={todo} />} />
             )}
         </>
     );
