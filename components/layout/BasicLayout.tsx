@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import styles from '../../styles/Home.module.css';
 import { FC } from 'react';
 import { createClient, Provider } from 'urql';
 
@@ -20,10 +19,10 @@ const BasicLayout: FC<Props> = ({ children, title }) => {
                 <meta name="description" content="Homework demo app" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div className={styles.container}>
+            <div>
                 <h1>{title}</h1>
                 {children}
-                <footer className={styles.footer}>&copy; Luboš Svoboda</footer>
+                <footer>&copy; Luboš Svoboda</footer>
             </div>
         </Provider>
     );

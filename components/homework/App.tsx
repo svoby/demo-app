@@ -1,5 +1,5 @@
 import { useGetTodoList } from '../../hooks/useGetTodos';
-import Todo from './Todo';
+import Todo from '../todo/Todo';
 import { FC, memo, ReactNode } from 'react';
 import List from '../../helpers/List';
 
