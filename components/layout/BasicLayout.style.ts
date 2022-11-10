@@ -7,8 +7,8 @@ const localVariables = {
 export const AppContainerStyled = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 320px;
     width: 320px;
+    min-height: 320px;
     background: rgba(255, 255, 255, 0.9);
     color: #000;
     border-radius: ${localVariables.borderRadius};
@@ -16,12 +16,12 @@ export const AppContainerStyled = styled.div`
 `;
 
 export const AppHeaderStyled = styled.h1`
+    padding: 1.5rem 2rem;
+    margin: 0;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: -0.1px;
-    padding: 1.5rem 2rem;
-    margin: 0;
-    background: rgb(0, 151, 241, 0.2);
+    background: rgb(0, 150, 240, 0.2);
     color: #22a5fb;
     border-radius: ${localVariables.borderRadius};
     border-bottom-left-radius: 0;
@@ -37,6 +37,6 @@ export const AppContentStyled = styled.div`
 
 export const AppFooterStyled = styled.footer`
     padding: 1.5rem 0;
-    opacity: 1;
     font-size: 0.9rem;
+    opacity: 1;
 `;

@@ -3,10 +3,10 @@ import { reset } from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
 
-${reset}
+  ${reset}
 
   html, body {
-    height:100%;
+    height: 100%;
   }
 
   body {

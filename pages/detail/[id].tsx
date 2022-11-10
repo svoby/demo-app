@@ -4,7 +4,6 @@ import { useRouter } from 'next/router';
 import { FC } from 'react';
 import {
     ButtonsBarStyled,
-    TodoDetailStyled,
     TodoDetailTitleStyled,
     TodoStatusStyled,
     TogglerButtonStyled,

@@ -1,7 +1,6 @@
 import { FC } from 'react';
 import { GetTodoListDocumentApi } from '../graphql/generated';
 import Todo from '../components/todo/Todo';
-
 import { client, ssrCache } from '../helpers/client';
 import List from '../helpers/List';
 import { useGetTodoList } from '../hooks/useGetTodos';

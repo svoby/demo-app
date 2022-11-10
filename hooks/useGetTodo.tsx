@@ -6,7 +6,7 @@ export function useGetTodo(id: string): TodoItem | undefined {
     const [result] = useGetTodoQueryApi({ variables: { id } });
     const { data, fetching, error } = result;
 
-    // error handling
+    // possible error handling
 
     return useMemo(() => data?.todo, [data]);
 }

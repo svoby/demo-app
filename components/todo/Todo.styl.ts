@@ -1,5 +1,6 @@
 import { HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
+import { ICanBeCompleted } from '../../types/todo';
 
 const localVariables = {
     transition: 'all 0.2s ease-in-out',
