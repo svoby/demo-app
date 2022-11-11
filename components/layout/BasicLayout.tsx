@@ -1,6 +1,6 @@
+import { AppContainerStyled, AppContentStyled, AppFooterStyled, AppHeaderStyled } from './BasicLayout.style';
 import Head from 'next/head';
 import { FC } from 'react';
-import { AppContainerStyled, AppContentStyled, AppFooterStyled, AppHeaderStyled } from './BasicLayout.style';
 
 type Props = {
     title?: string;

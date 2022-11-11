@@ -1,6 +1,6 @@
-import { Resolver, Query, Arg } from 'type-graphql';
 import { Todo } from './todos';
 import todos_dummy from './todos_dummy.json';
+import { Arg, Query, Resolver } from 'type-graphql';
 
 @Resolver(Todo)
 export class TodosResolver {

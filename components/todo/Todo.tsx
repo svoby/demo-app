@@ -1,8 +1,8 @@
+import { TodoItem } from '../../types/todo';
+import { TodoCheckStyled, TodoLinkStyled, TodoStyled } from './Todo.styl';
+import NextLink from 'next/link';
 import { FC, memo } from 'react';
 import React from 'react';
-import { TodoItem } from '../../types/todo';
-import NextLink from 'next/link';
-import { TodoCheckStyled, TodoLinkStyled, TodoStyled } from './Todo.styl';
 
 type TodoProps = {
     todo: TodoItem;

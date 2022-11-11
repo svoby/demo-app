@@ -1,6 +1,6 @@
+import { ICanBeCompleted } from '../../types/todo';
 import { HTMLAttributes } from 'react';
 import styled, { css } from 'styled-components';
-import { ICanBeCompleted } from '../../types/todo';
 
 const localVariables = {
     transition: 'all 0.2s ease-in-out',
@@ -33,7 +33,7 @@ export const TodoCheckStyled = styled.button<HTMLAttributes<HTMLButtonElement> &
         cursor: pointer;
 
         ${$completed &&
-    css`
+        css`
             opacity: 0.5;
             &:after {
                 content: ' ';
@@ -58,7 +58,7 @@ export const TodoLinkStyled = styled.span<HTMLAttributes<HTMLSpanElement> & ICan
         a {
             display: block;
             padding: 1rem;
-            color: ${$completed ? localVariables.completedColor: '#000'};
+            color: ${$completed ? localVariables.completedColor : '#000'};
             transition: ${localVariables.transition};
             text-decoration: ${$completed ? 'line-through' : 'none'};
             border: none;

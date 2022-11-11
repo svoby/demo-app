@@ -1,7 +1,3 @@
-import { GetServerSidePropsContext } from 'next';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { FC } from 'react';
 import {
     ButtonsBarStyled,
     TodoDetailTitleStyled,
@@ -11,6 +7,10 @@ import {
 import { GetTodoDocumentApi } from '../../graphql/generated';
 import { client, ssrCache } from '../../helpers/client';
 import { useGetTodo } from '../../hooks/useGetTodo';
+import { GetServerSidePropsContext } from 'next';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { FC } from 'react';
 
 const DetailPage: FC = () => {
     const router = useRouter();

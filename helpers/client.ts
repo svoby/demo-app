@@ -1,5 +1,5 @@
-import { createClient, ssrExchange, dedupExchange, cacheExchange, fetchExchange } from 'urql';
 import { isServer } from './isServer';
+import { cacheExchange, createClient, dedupExchange, fetchExchange, ssrExchange } from 'urql';
 
 const ssrCache = ssrExchange({ isClient: !isServer });
 const client = createClient({

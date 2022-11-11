@@ -1,9 +1,9 @@
-import { FC } from 'react';
-import { GetTodoListDocumentApi } from '../graphql/generated';
 import Todo from '../components/todo/Todo';
-import { client, ssrCache } from '../helpers/client';
+import { GetTodoListDocumentApi } from '../graphql/generated';
 import List from '../helpers/List';
+import { client, ssrCache } from '../helpers/client';
 import { useGetTodoList } from '../hooks/useGetTodos';
+import { FC } from 'react';
 
 const Index: FC = () => {
     const [todoList, fetching] = useGetTodoList();
@@ -20,7 +20,7 @@ const Index: FC = () => {
 };
 
 export async function getServerSideProps() {
-    const test = await client.query(GetTodoListDocumentApi, undefined).toPromise();
+    await client.query(GetTodoListDocumentApi, undefined).toPromise();
 
     return {
         props: {

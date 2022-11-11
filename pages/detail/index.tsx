@@ -1,6 +1,6 @@
+import { ButtonsBarStyled, TodoDetailTitleStyled } from '../../components/detail/Detail.style';
 import Link from 'next/link';
 import { FC } from 'react';
-import { ButtonsBarStyled, TodoDetailTitleStyled } from '../../components/detail/Detail.style';
 
 const Detail: FC = () => {
     return (

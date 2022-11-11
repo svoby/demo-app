@@ -1,9 +1,9 @@
-import 'reflect-metadata';
+import { TodosResolver } from '../../graphql/schema/todos.resolver';
 import { ApolloServer } from 'apollo-server-micro';
 import { MicroRequest } from 'apollo-server-micro/dist/types';
-import { ServerResponse, IncomingMessage } from 'http';
+import { IncomingMessage, ServerResponse } from 'http';
+import 'reflect-metadata';
 import { buildSchema } from 'type-graphql';
-import { TodosResolver } from '../../graphql/schema/todos.resolver';
 
 const schema = await buildSchema({
     resolvers: [TodosResolver],
