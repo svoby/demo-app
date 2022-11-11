@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
     align-items: center;
     margin: 0;
     padding: 0;
-    background: #32a2f6 url('/css/wallpaper.webp') no-repeat;
+    background: #32a2f6 url('/img/wallpaper.webp') no-repeat;
     background-position: 50%;
     background-size: cover;
     font-family: sans-serif;
@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
       color: #025797;
       border-bottom-color: #025797;
     }
+  }
+
+  p {
+    line-height: 1.4;
   }
 
   footer {

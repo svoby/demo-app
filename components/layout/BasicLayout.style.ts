@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const localVariables = {
     borderRadius: '16px',
-};
+} as const;
 
 export const AppContainerStyled = styled.div`
     display: flex;

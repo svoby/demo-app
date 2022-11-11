@@ -6,7 +6,7 @@ const localVariables = {
     transition: 'all 0.2s ease-in-out',
     checkColor: '#32a2f6',
     completedColor: '#999',
-};
+} as const;
 
 export const TodoStyled = styled.div`
     display: flex;

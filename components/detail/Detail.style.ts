@@ -51,7 +51,7 @@ export const TogglerButtonStyled = styled.button<HTMLAttributes<HTMLButtonElemen
 
         ${$completed
             ? css`
-                  background: red;
+                  background: linear-gradient(#f76360 10%, red);
               `
             : css`
                   background: linear-gradient(#03db03 10%, green);
